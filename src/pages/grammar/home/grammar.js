@@ -7,7 +7,7 @@ import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 
 
 
-
+//playSound
 export function Grammar(props){
  
     const {navigation} = props; 
@@ -21,29 +21,25 @@ export function Grammar(props){
             <View style={styles.body}>
                 <TouchableOpacity 
                     style={styles.secction} 
-                    onPress={()=> navigation.navigate('grammarList')}
-                 >
+                    onPress={()=> navigation.navigate('grammarList')} >
                     <Image style={styles.secctionIcon} source={bookIcon}/>
                     <Text style={styles.secctionText}>Grammar</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={styles.secctionTwo}
-                    onPress={()=> navigation.navigate('exerciseView')}
-                >
+                    onPress={()=> navigation.navigate('exerciseView')} >
                     <Image style={styles.secctionIcon} source={practiceIcon}/>
                     <Text style={styles.secctionText}>Exercise</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={styles.secction}
-                    onPress={()=> navigation.navigate('favoriteView')}    
-                >
+                    onPress={()=> navigation.navigate('favoriteView')} >
                     <Image style={styles.secctionIcon} source={favoriteIcon}/>
                     <Text style={styles.secctionText}>Favorite</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
                    style={styles.secctionTwo}
-                   onPress={()=> navigation.navigate('phraseView')}                   
-                >
+                   onPress={()=> navigation.navigate('phraseView')} >
                    <Image style={styles.secctionIcon} source={phraseIcon}/>
                    <Text style={styles.secctionText}>Phrase</Text>
                 </TouchableOpacity>
@@ -82,7 +78,6 @@ const styles = StyleSheet.create({
        marginTop:wp('5%'), 
        borderRadius:wp('3%'), 
   
-       
     }, 
     secction:{
         width:wp('42%'), 

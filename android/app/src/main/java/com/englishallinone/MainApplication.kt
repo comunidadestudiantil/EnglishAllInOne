@@ -15,6 +15,8 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage; 
 
 
+
+
 class MainApplication : Application(), ReactApplication {
 
   override val reactNativeHost: ReactNativeHost =
@@ -33,7 +35,8 @@ class MainApplication : Application(), ReactApplication {
 
 
             return PackageList(this).packages
-        }
+         
+       }
 
         override fun getJSMainModuleName(): String = "index"
 

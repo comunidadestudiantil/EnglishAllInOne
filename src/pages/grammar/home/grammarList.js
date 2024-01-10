@@ -11,8 +11,9 @@ export function GrammarList(props){
     const {navigation} = props; 
     const data = [ 
          {title:'Singular and plural nouns', navigation:'singularAndPluralNouns'}, 
-         {title:'The indefinite article (a/an)', navigation:'singularAndPluralNouns'},
-         {title:'The article “the”', navigation:'singularAndPluralNouns'},
+         {title:'The indefinite article (a/an)', navigation:'idefiniteArticle'},
+         {title:'The article “the”', navigation:'articleThe'},
+         {title:'Pronoun', navigation:'pronoun'}, 
          {title:'Present simple', navigation:'presentSimple'},
          {title:'Preposition', navigation:'singularAndPluralNouns'},
          {title:'Prepositions of place (in, at, on)', navigation:'singularAndPluralNouns'},
@@ -28,7 +29,6 @@ export function GrammarList(props){
          {title:'Superlative adjectives', navigation:'singularAndPluralNouns'},
          {title:'Usage of Do-Make', navigation:'singularAndPluralNouns'}, 
          {title:'Adverb', navigation:'singularAndPluralNouns'}, 
-         {title:'Pronoun', navigation:'singularAndPluralNouns'}, 
          {title:'Possessive adjectives', navigation:'singularAndPluralNouns'}, 
          {title:'Possessive pronouns', navigation:'singularAndPluralNouns'}, 
          {title:'Reflexive pronouns', navigation:'singularAndPluralNouns'}, 

@@ -2,8 +2,8 @@ import * as React from 'react';
 //import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import { Easing } from 'react-native';
-import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView } from '../app/grammar/dist';
-import { PresentSimple, SingularAndPluralNouns} from '../app/grammar/topic';
+import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView } from '../pages/grammar/dist';
+import { PresentSimple, SingularAndPluralNouns, IdefiniteArticle, ArticleThe, Pronoun} from '../pages/grammar/topic';
 
 const Stack = createStackNavigator();
 
@@ -82,6 +82,24 @@ export function HomeStack() {
       <Stack.Screen
         name="presentSimple"
         component={PresentSimple}
+        options={{ headerShown: false }}
+      />
+
+     <Stack.Screen
+        name="idefiniteArticle"
+        component={IdefiniteArticle}
+        options={{ headerShown: false }}
+      />
+
+     <Stack.Screen
+        name="articleThe"
+        component={ArticleThe}
+        options={{ headerShown: false }}
+      />
+    
+    <Stack.Screen
+        name="pronoun"
+        component={Pronoun}
         options={{ headerShown: false }}
       />
 

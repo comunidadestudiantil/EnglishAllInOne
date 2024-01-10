@@ -1,5 +1,6 @@
 import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import {hp, wp} from '../../utils/responsive';
+import {BoldStyle} from '../../utils/textBold';
 
 
 export function TopicContainer({data}) {
@@ -17,7 +18,7 @@ export function TopicContainer({data}) {
         {data.map((list, index) => (
           <View key={index} style={styles.topicContainer}>
             <Text style={styles.topicContainerTitle}>{list.title}</Text>
-            <Text style={styles.topicContainerText}>{list.description}</Text>
+            <Text style={styles.topicContainerText}><BoldStyle>{list.description}</BoldStyle></Text>
           </View>
         ))}
       </ScrollView>

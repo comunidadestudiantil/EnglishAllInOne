@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { Easing } from 'react-native';
-import {Note} from '../app';
+import {Note} from '../pages';
 
 const Stack = createNativeStackNavigator();
 
