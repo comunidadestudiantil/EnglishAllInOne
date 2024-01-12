@@ -3,7 +3,25 @@ export * from './presentSimple';
 export * from './IndefiniteArticle'; 
 export * from './articleThe'; 
 export * from './pronoun'; 
-
-
-
-
+export * from './preposition'; 
+export * from './prepositionsOfPlace'; 
+export * from './prepositionsOfTime'; 
+export * from './presentContinuous'; 
+export * from './pastSimple'; 
+export * from './pastContinuous'; 
+export * from './pastContinuousSimplePast'; 
+export * from './futureSimple'; 
+export * from './beGoingTo'; 
+export * from './futureContinuous'; 
+export * from './partsOfSpeech'; 
+export * from './adjective'; 
+export * from './superlativeAdjectives'; 
+export * from './usageOfDoMake'; 
+export * from './adverb'; 
+export * from './possessiveAdjectives'; 
+export * from './possessivePronouns'; 
+export * from './reflexivePronouns'; 
+export * from './modalAuxiliaries'; 
+export * from './presentPerfect'; 
+export * from './pastPerfect';
+export * from './futurePerfect'; 

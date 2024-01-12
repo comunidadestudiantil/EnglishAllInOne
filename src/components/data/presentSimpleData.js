@@ -117,7 +117,7 @@ It *is not* / It isn't cold.
       
     },
 
-        {
+    {
       title:'To Be (Question)',
       description:`
 *Am* I happy?
@@ -133,6 +133,57 @@ It *is not* / It isn't cold.
 *Is* she kind?
 
 *Is* it cold?
+`,
+      
+    },
+
+    {
+      title:'When / How do we use the Simple Present Tense?',
+      description:`
+*We use the Present Simple to talk about:*
+
+● The action is general.
+
+● The action happens all the time, or habitually, in the past, present and future.
+
+● The action is not only happening now.
+
+● The statement is always true.
+
+
+*Habits, daily routines or something that often happens.*
+
+We play football every weekend.
+
+She usually gets up at 6 o'clock.
+
+He doesn't come very often.
+
+They often go to the cinema.
+
+*Schedules*
+
+The plane leaves tonight at 8 o'clock.
+
+The next train comes in 10 minutes.
+
+The library open at 10.
+
+The lesson starts at 7 tomorrow morning.
+
+*Note* that with the verb *to be*, we can also use the simple present tense for situations that are not general. We can use the simple present tense to talk about now. Look at these examples of the verb "to be" in the simple present tense¡ªsome of them are general, some of them are now:
+ 
+*The situation is now.*
+
+Am I right? 
+Tara is not at home.
+You are happy.
+
+*The situation is general. Past, present and future.*
+
+I am not fat. 
+Why are you so beautiful?
+Ram is tall.
 `,
       
     },
