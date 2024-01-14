@@ -25,3 +25,8 @@ export * from './modalAuxiliaries';
 export * from './presentPerfect'; 
 export * from './pastPerfect';
 export * from './futurePerfect'; 
+export * from './conditionals'; 
+export * from './questionTang'; 
+export * from './gerunds'; 
+export * from './reportedSpeech'; 
+export * from './activeOrPassiveVoice'; 

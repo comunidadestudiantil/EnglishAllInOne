@@ -1,22 +1,19 @@
-import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import {hp, wp} from '../../utils/responsive';
 import {BoldStyle} from '../../utils/textBold';
+import {Ionicons} from '../../utils/icons'; 
+import {Audio} from './audio'; 
 
 
-export function TopicContainer({data}) {
 
+export function TopicContainer({data, nameOfAudio}) {
 
   return (
     <View style={styles.body}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-      {/*  <View style={styles.bodyCard}>
-          <Text style={styles.bodyCardTitle}>Singular and plural nouns.</Text>
-          <Text style={styles.bodyCardText}>
-            A noun names a person, place, thing, or idea.
-          </Text>
-        </View> */}
         {data.map((list, index) => (
           <View key={index} style={styles.topicContainer}>
+            <Audio nameOfAudio={`${nameOfAudio}${index+1}`}/>
             <Text style={styles.topicContainerTitle}>{list.title}</Text>
             <Text style={styles.topicContainerText}><BoldStyle>{list.description}</BoldStyle></Text>
           </View>
@@ -79,5 +76,15 @@ const styles = StyleSheet.create({
     topicContainerText:{
       fontSize:wp('4.5%'),
       color:'#000'
+    },
+    topicbtnContainer:{
+      flex:1,
+      flexDirection:'row',
+      justifyContent:'flex-end',
+      alignItems:'flex-end'
+    },
+    topicContainerbtn:{
+      marginHorizontal:wp('2%')
+     
     }
 })

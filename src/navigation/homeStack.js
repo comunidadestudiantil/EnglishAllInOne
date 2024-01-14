@@ -11,7 +11,9 @@ import {
       BeGoingTo, FutureContinuous, PartsOfSpeech, Adjective, 
       SuperlativeAdjectives, UsageOfDoMake, Adverb, PossessiveAdjectives,
       PossessivePronouns, ReflexivePronouns, ModalAuxiliaries, 
-      PresentPerfect, PastPerfect, FuturePerfect
+      PresentPerfect, PastPerfect, FuturePerfect, Conditionals,
+      QuestionTang, Gerunds, ReportedSpeech, ActiveOrPassiveVoice
+
       
     } from '../pages/grammar/topic';
 
@@ -234,6 +236,37 @@ export function HomeStack() {
           component={FuturePerfect}
           options={{ headerShown: false }}
         /> 
+      
+      <Stack.Screen
+          name="conditionals"
+          component={Conditionals}
+          options={{ headerShown: false }}
+        /> 
+
+      <Stack.Screen
+          name="questionTang"
+          component={QuestionTang}
+          options={{ headerShown: false }}
+        /> 
+
+       <Stack.Screen
+          name="gerunds"
+          component={Gerunds}
+          options={{ headerShown: false }}
+        /> 
+
+       <Stack.Screen
+          name="reportedSpeech"
+          component={ReportedSpeech}
+          options={{ headerShown: false }}
+        /> 
+
+       <Stack.Screen
+          name="activeOrPassiveVoice"
+          component={ActiveOrPassiveVoice}
+          options={{ headerShown: false }}
+        /> 
+
 
     </Stack.Navigator>
 

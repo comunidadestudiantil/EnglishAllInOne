@@ -1,19 +1,18 @@
-
 import {View, StyleSheet} from 'react-native'; 
 import {SectionHeader} from '../../../components/header';
 import {TopicContainer} from '../../../components/topicContainer/topicContainer';
-import {singularAndPluralNounsData} from '../../../components/data';
+import {activeOrPassiveVoiceData} from '../../../components/data';
 import {hp, wp} from '../../../utils/responsive'
 
 
-export function SingularAndPluralNouns(props){
+export function ActiveOrPassiveVoice(props){
  
     const {navigation} = props;
 
     return(
         <View style={styles.container}>
-            <SectionHeader title={'Singular and Plural Nouns'} navigation={navigation}/>
-            <TopicContainer data={singularAndPluralNounsData} nameOfAudio={'singularAndPluralNouns'}/>
+            <SectionHeader title={'Active or passive voice'} navigation={navigation}/>
+            <TopicContainer data={activeOrPassiveVoiceData}/>
         </View>
      )
 }

@@ -2,18 +2,18 @@
 import {View, StyleSheet} from 'react-native'; 
 import {SectionHeader} from '../../../components/header';
 import {TopicContainer} from '../../../components/topicContainer/topicContainer';
-import {singularAndPluralNounsData} from '../../../components/data';
+import {questionTangData} from '../../../components/data';
 import {hp, wp} from '../../../utils/responsive'
 
 
-export function SingularAndPluralNouns(props){
+export function QuestionTang(props){
  
     const {navigation} = props;
 
     return(
         <View style={styles.container}>
-            <SectionHeader title={'Singular and Plural Nouns'} navigation={navigation}/>
-            <TopicContainer data={singularAndPluralNounsData} nameOfAudio={'singularAndPluralNouns'}/>
+            <SectionHeader title={'Question Tang'} navigation={navigation}/>
+            <TopicContainer data={questionTangData}/>
         </View>
      )
 }

@@ -37,9 +37,15 @@ export function GrammarList(props){
          {title:'Present perfect', navigation:'presentPerfect'}, 
          {title:'Past perfect', navigation:'pastPerfect'}, 
          {title:'Future perfect', navigation:'futurePerfect'}, 
-      
+         {title:'Conditionals', navigation:'conditionals'}, 
+         {title:'Question Tang', navigation:'questionTang'},
+         {title:'Gerunds', navigation:'gerunds'},
+         {title:'Reported Speech', navigation:'reportedSpeech'},
+         {title:'Active Or Passive Voice', navigation:'activeOrPassiveVoice'},
+
+         //Active or passive voice
       ]
-//singularAndPluralNouns
+
     return(
         <LinearGradient colors={['#9cb6dd', '#d3e2f2']} style={styles.container}>
             <SectionHeader  navigation={navigation} title={'Grammar Topic'}/>

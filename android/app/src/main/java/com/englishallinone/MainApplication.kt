@@ -13,8 +13,8 @@ import com.facebook.react.flipper.ReactNativeFlipper
 import com.facebook.soloader.SoLoader
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage; 
-
-
+import com.zmxv.RNSound.RNSoundPackage
+import com.rnfs.RNFSPackage;
 
 
 class MainApplication : Application(), ReactApplication {
