@@ -1,23 +1,46 @@
+import {useState} from 'react';
 import {View, Text, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import {hp, wp} from '../../utils/responsive';
 import {BoldStyle} from '../../utils/textBold';
 import {Ionicons} from '../../utils/icons'; 
 import {Audio} from './audio'; 
+import {Table} from './table'; 
 
 
 
 export function TopicContainer({data, nameOfAudio}) {
 
+  const [showOption, setShowOption] = useState([]); 
+  const [audioToBePlay, setaudioToBePlay] = useState([]); 
+  const [listOfPlaying, setListOfPlaying] = useState([])
+
   return (
     <View style={styles.body}>
       <ScrollView contentContainerStyle={styles.scrollContainer}>
-        {data.map((list, index) => (
-          <View key={index} style={styles.topicContainer}>
-            <Audio nameOfAudio={`${nameOfAudio}${index+1}`}/>
-            <Text style={styles.topicContainerTitle}>{list.title}</Text>
-            <Text style={styles.topicContainerText}><BoldStyle>{list.description}</BoldStyle></Text>
+        {data.map((list, index) =>{
+       
+          return(
+            <View key={index} style={styles.topicContainer}>
+            <Audio 
+              nameOfAudio={`${nameOfAudio}${index+1}`} 
+              index={index}
+              showOption={showOption}
+              setShowOption={setShowOption}
+              audioToBePlay={audioToBePlay}
+              setaudioToBePlay={setaudioToBePlay}
+              listOfPlaying={listOfPlaying}
+              setListOfPlaying={setListOfPlaying}
+            />
+             {list.title && <Text selectable style={styles.topicContainerTitle}>{list.title}</Text>}
+             {list.description && <Text selectable style={styles.topicContainerText}><BoldStyle>{list.description}</BoldStyle></Text>}
+             {list.table && <Table data={list.table}/>}
+           
+            <Text style={styles.topicContainerTextIndex}>{index+1}</Text>
           </View>
-        ))}
+          )
+        } 
+        
+        )}
       </ScrollView>
     </View>
   );
@@ -29,8 +52,8 @@ const styles = StyleSheet.create({
 
     body:{
         flex:1,
-        backgroundColor:'#8daeec'
-       // backgroundColor:'#e2ebf7'
+       // backgroundColor:'#fff'
+        backgroundColor:'#f2f6fc'
     }, 
     scrollContainer:{
     
@@ -38,11 +61,11 @@ const styles = StyleSheet.create({
       }, 
     bodyCard:{
       width:wp('96%'),
-      height:wp('30%'), 
+      //height:wp('30%'), 
       backgroundColor:'#e2ebf7',  
       marginHorizontal:wp('2%'), 
       marginVertical:wp('1%'), 
-      borderRadius:wp('3%'),
+     // borderRadius:wp('3%'),
       paddingHorizontal:wp('5%'), 
       elevation:6
     }, 
@@ -61,15 +84,18 @@ const styles = StyleSheet.create({
          textAlign:'center'
     },
     topicContainer:{
-        backgroundColor:'#e2ebf7', 
-        margin:wp('2%'), 
-        padding:wp('4%'), 
-        borderRadius:wp('3%'),
-        elevation:6
+       // backgroundColor:'#e2ebf7', 
+        //margin:wp('2%'), 
+        padding:wp('2%'), 
+        //borderRadius:wp('3%'),
+       // elevation:6
+       //paddingTop:wp('13%'),
+       borderTopColor:'#000',
+       borderTopWidth:wp('0.2%')
     }, 
     topicContainerTitle:{
       fontSize:wp('5%'), 
-      textAlign:'center', 
+     // textAlign:'center', 
       fontWeight:'bold', 
       color:'#000'
     }, 
@@ -86,5 +112,13 @@ const styles = StyleSheet.create({
     topicContainerbtn:{
       marginHorizontal:wp('2%')
      
+    }, 
+    topicContainerTextIndex:{
+      //backgroundColor:'red', 
+      color:'#000', 
+      fontSize:wp('4.5%'), 
+      fontWeight:'700',
+      textAlign:'right',
+      marginTop:wp('5%')
     }
 })

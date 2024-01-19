@@ -1,0 +1,47 @@
+import {
+    activeOrPassiveVoiceData,adjectiveData,adverbData,articleTheData,beGoingToData,
+    conditionalsData,futureContinuousData,futurePerfectData,futureSimpleData,gerundsData,
+    indefiniteArticleData,modalAuxiliariesData,partsOfSpeechData,pastContinuousData,
+    pastContinuousSimplePastData,pastPerfectData,pastSimpleData,possessiveAdjectivesData,
+    possessivePronounsData,prepositionData,prepositionsOfPlaceData,prepositionsOfTimeData,
+    presentContinuousData,presentPerfectData,presentSimpleData,pronounData,questionTangData,
+    reflexivePronounsData,reportedSpeechData,singularAndPluralNounsData,superlativeAdjectivesData,
+    usageOfDoMakeData
+} from './index';
+
+
+export const data ={
+    'Singular and plural nouns':singularAndPluralNounsData, 
+    'The indefinite article (a/an)':indefiniteArticleData,
+    'The article “the”':articleTheData,
+    'Pronoun':pronounData, 
+    'Present simple':presentSimpleData,
+    'Preposition':prepositionData,
+    'Prepositions of place (in, at, on)':prepositionsOfPlaceData,
+    'Prepositions of time (in, at, on)':prepositionsOfTimeData,
+    'Present continuous':presentContinuousData, 
+    'Past simple':pastSimpleData,
+    'Past continuous':pastContinuousData,
+    'Past continuous vs simple past':pastContinuousSimplePastData,
+    'Future simple':futureSimpleData, 
+    'Be Going to':beGoingToData,
+    'Future continuous':futureContinuousData,
+    'Pasts of speech':partsOfSpeechData,
+    'Adjective':adjectiveData,
+    'Superlative adjectives':superlativeAdjectivesData,
+    'Usage of Do-Make':usageOfDoMakeData, 
+    'Adverb':adverbData, 
+    'Possessive adjectives':possessiveAdjectivesData, 
+    'Possessive pronouns':possessivePronounsData, 
+    'Reflexive pronouns':reflexivePronounsData, 
+    'Modal auxiliaries':modalAuxiliariesData, 
+    'Present perfect':presentPerfectData, 
+    'Past perfect':pastPerfectData, 
+    'Future perfect':futurePerfectData, 
+    'Conditionals':conditionalsData, 
+    'Question Tang':questionTangData,
+    'Gerunds':gerundsData,
+    'Reported Speech':reportedSpeechData,
+    'Active Or Passive Voice':activeOrPassiveVoiceData,
+
+}

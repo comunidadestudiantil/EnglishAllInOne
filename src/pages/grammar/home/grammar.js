@@ -2,7 +2,7 @@ import {LinearGradient} from '../../../utils/linearGradient';
 import {hp, wp} from '../../../utils/responsive';
 import {HomeHeader} from '../../../components/header';
 import {bookIcon, favoriteIcon, phraseIcon, practiceIcon} from '../../../image';
-import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
+import {View, Text, StyleSheet, Image, TouchableOpacity, StatusBar} from 'react-native';
 
 
 
@@ -14,6 +14,7 @@ export function Grammar(props){
      // 
     return(
         <LinearGradient style={styles.container} colors={['#414e6e', '#9cb6dd']}>
+            <StatusBar backgroundColor={'#556ba0'}/>
             <HomeHeader navigation={navigation} />
             
             <View style={styles.first_secction}></View>

@@ -1,9 +1,12 @@
 import * as React from 'react';
-import { createNativeStackNavigator} from '@react-navigation/native-stack';
-import { Easing } from 'react-native';
-import {Vocabulary} from '../pages/vocabulary/vocabulary';
 
-const Stack = createNativeStackNavigator();
+import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
+import { Easing } from 'react-native';
+import {Vocabulary, NounsVocabulary, VocabularyListView, 
+        VerbVocabulary, AdjectivesVocabulary
+       } from '../pages/vocabulary';
+
+const Stack = createStackNavigator();
 
 
 export function VocabularyStack() {
@@ -31,15 +34,15 @@ export function VocabularyStack() {
          screenOptions={{
         gestureEnabled: false,
         headerMode:'nope',
-        // gestureDirection: 'horizontal',
-        //cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+         gestureDirection: 'horizontal',
+         cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         cardStyle: { opacity: 1, backgroundColor: 'red', },
-       /* transitionSpec: {
+        transitionSpec: {
             open: config,
             close: CloseConfing
-        }*/
+        }
        }}
-       // animation='slide'
+        animation='slide'
       
       >
 
@@ -48,6 +51,29 @@ export function VocabularyStack() {
           component={Vocabulary} 
           options={{headerShown: false}}
         />
+       
+       <Stack.Screen 
+          name="nounsVocabulary" 
+          component={NounsVocabulary} 
+          options={{headerShown: false}}
+        />
+      <Stack.Screen 
+          name="vocabularyListView" 
+          component={VocabularyListView} 
+          options={{headerShown: false}}
+        />
+
+      <Stack.Screen 
+          name="verbVocabulary" 
+          component={VerbVocabulary} 
+          options={{headerShown: false}}
+       />
+
+      <Stack.Screen 
+          name="adjectivesVocabulary" 
+          component={AdjectivesVocabulary} 
+          options={{headerShown: false}}
+       />
         
       </Stack.Navigator>
    

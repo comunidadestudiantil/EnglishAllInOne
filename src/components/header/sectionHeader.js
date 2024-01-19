@@ -41,9 +41,11 @@ const styles = StyleSheet.create({
       // backgroundColor:'red'
     }, 
     text:{
-        width:wp('100%'), 
-        fontSize:wp('5.2%'), 
+        width:wp('70%'), 
+        fontSize:wp('4.5%'), 
         fontWeight:'bold',
-        textAlign:'center'
+        textAlign:'center', 
+        marginHorizontal:wp('15'), 
+        color:'#fff'
     }
 })

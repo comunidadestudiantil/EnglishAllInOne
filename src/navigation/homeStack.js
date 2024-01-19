@@ -2,20 +2,8 @@ import * as React from 'react';
 //import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import { Easing } from 'react-native';
-import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView } from '../pages/grammar/dist';
-import { 
-      PresentSimple, SingularAndPluralNouns, IdefiniteArticle, 
-      ArticleThe, Pronoun, Preposition, PrepositionsOfPlace, 
-      PrepositionsOfTime, PresentContinuous, PastSimple,
-      PastContinuous, PastContinuousSimplePast, FutureSimple, 
-      BeGoingTo, FutureContinuous, PartsOfSpeech, Adjective, 
-      SuperlativeAdjectives, UsageOfDoMake, Adverb, PossessiveAdjectives,
-      PossessivePronouns, ReflexivePronouns, ModalAuxiliaries, 
-      PresentPerfect, PastPerfect, FuturePerfect, Conditionals,
-      QuestionTang, Gerunds, ReportedSpeech, ActiveOrPassiveVoice
-
-      
-    } from '../pages/grammar/topic';
+import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView, RenderAllPhaseView } from '../pages/grammar/dist';
+import { ViewTopic} from '../pages/grammar/topic';
 
 
 const Stack = createStackNavigator();
@@ -84,188 +72,19 @@ export function HomeStack() {
         options={{ headerShown: false }}
       />
 
-      <Stack.Screen
-        name="singularAndPluralNouns"
-        component={SingularAndPluralNouns}
-        options={{ headerShown: false }}
-      />
-
-      <Stack.Screen
-        name="presentSimple"
-        component={PresentSimple}
-        options={{ headerShown: false }}
-      />
-
-     <Stack.Screen
-        name="idefiniteArticle"
-        component={IdefiniteArticle}
-        options={{ headerShown: false }}
-      />
-
-     <Stack.Screen
-        name="articleThe"
-        component={ArticleThe}
-        options={{ headerShown: false }}
-      />
-    
-    <Stack.Screen
-        name="pronoun"
-        component={Pronoun}
-        options={{ headerShown: false }}
-      />
-
-    <Stack.Screen
-        name="preposition"
-        component={Preposition}
-        options={{ headerShown: false }}
-      />  
-
-    <Stack.Screen
-        name="prepositionsOfPlace"
-        component={PrepositionsOfPlace}
-        options={{ headerShown: false }}
-      />  
-
-     <Stack.Screen
-        name="prepositionsOfTime"
-        component={PrepositionsOfTime}
-        options={{ headerShown: false }}
-      />  
       
       <Stack.Screen
-        name="presentContinuous"
-        component={PresentContinuous}
-        options={{ headerShown: false }}
-      />  
-
-      <Stack.Screen
-        name="pastSimple"
-        component={PastSimple}
-        options={{ headerShown: false }}
-      /> 
-
-     <Stack.Screen
-        name="pastContinuous"
-        component={PastContinuous}
-        options={{ headerShown: false }}
-      /> 
-
-     <Stack.Screen
-        name="pastContinuousSimplePast"
-        component={PastContinuousSimplePast}
-        options={{ headerShown: false }}
-      /> 
-
-    <Stack.Screen
-        name="futureSimple"
-        component={FutureSimple}
-        options={{ headerShown: false }}
-      /> 
-    <Stack.Screen
-        name="beGoingTo"
-        component={BeGoingTo}
-        options={{ headerShown: false }}
-      />  
-
-    <Stack.Screen
-        name="futureContinuous"
-        component={FutureContinuous}
-        options={{ headerShown: false }}
-      />  
-    
-    <Stack.Screen
-        name="partsOfSpeech"
-        component={PartsOfSpeech}
-        options={{ headerShown: false }}
-      />   
-    
-     <Stack.Screen
-        name="adjective"
-        component={Adjective}
-        options={{ headerShown: false }}
-      />   
-     <Stack.Screen
-        name="superlativeAdjectives"
-        component={SuperlativeAdjectives}
-        options={{ headerShown: false }}
-      />   
-     
-     <Stack.Screen
-        name="usageOfDoMake"
-        component={UsageOfDoMake}
-        options={{ headerShown: false }}
-      />  
-     <Stack.Screen
-        name="adverb"
-        component={Adverb}
-        options={{ headerShown: false }}
-      />  
-      <Stack.Screen
-        name="possessiveAdjectives"
-        component={PossessiveAdjectives}
-        options={{ headerShown: false }}
-      />  
-      <Stack.Screen
-        name="possessivePronouns"
-        component={PossessivePronouns}
-        options={{ headerShown: false }}
-      />  
-      <Stack.Screen
-        name="reflexivePronouns"
-        component={ReflexivePronouns}
-        options={{ headerShown: false }}
-      /> 
-
-      <Stack.Screen
-        name="modalAuxiliaries"
-        component={ModalAuxiliaries}
-        options={{ headerShown: false }}
-      /> 
-      <Stack.Screen
-        name="presentPerfect"
-        component={PresentPerfect}
-        options={{ headerShown: false }}
-      /> 
-        <Stack.Screen
-        name="pastPerfect"
-        component={PastPerfect}
-        options={{ headerShown: false }}
-      /> 
-      <Stack.Screen
-          name="futurePerfect"
-          component={FuturePerfect}
-          options={{ headerShown: false }}
-        /> 
-      
-      <Stack.Screen
-          name="conditionals"
-          component={Conditionals}
-          options={{ headerShown: false }}
-        /> 
-
-      <Stack.Screen
-          name="questionTang"
-          component={QuestionTang}
+          name="renderAllPhaseView"
+          component={RenderAllPhaseView}
           options={{ headerShown: false }}
         /> 
 
        <Stack.Screen
-          name="gerunds"
-          component={Gerunds}
+          name="viewTopic"
+          component={ViewTopic}
           options={{ headerShown: false }}
         /> 
 
-       <Stack.Screen
-          name="reportedSpeech"
-          component={ReportedSpeech}
-          options={{ headerShown: false }}
-        /> 
-
-       <Stack.Screen
-          name="activeOrPassiveVoice"
-          component={ActiveOrPassiveVoice}
-          options={{ headerShown: false }}
-        /> 
 
 
     </Stack.Navigator>

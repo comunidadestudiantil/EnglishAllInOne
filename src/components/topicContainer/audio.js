@@ -1,31 +1,30 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import {View, Text, ScrollView, StyleSheet, TouchableOpacity} from 'react-native';
 import {hp, wp} from '../../utils/responsive';
-import {BoldStyle} from '../../utils/textBold';
-import {Ionicons} from '../../utils/icons'; 
+import {Ionicons, Fontisto, FontAwesome5, AntDesign, MaterialCommunityIcons} from '../../utils/icons'; 
 import Sound  from 'react-native-sound'; 
 import { exists, downloadFile, mkdir, DocumentDirectoryPath, readDir, unlink } from 'react-native-fs';
 
 
-export function Audio({nameOfAudio}) {
+export function Audio({nameOfAudio, showOption, setShowOption,audioToBePlay, setaudioToBePlay, index, listOfPlaying, setListOfPlaying}) {
     
-
-  const [isReady, setIsready] = useState()
   const [url, setUrl] = useState(''); 
+
 
 
 useEffect(()=>{
 
 const playSound = new Sound(`${DocumentDirectoryPath}/${nameOfAudio}.mp3`, Sound.LIBRARY, (error) => {
-  if (error) {
-      console.log('failed to load the sound', error);
-      return;
-  }
+    if (error) {
+        console.log('failed to load the sound', error);
+        return;
+    }
   
-  })
+ })
+  
 
-  setIsready(playSound)  
- 
+  setaudioToBePlay((prev)=> [...prev, playSound])  
+  
 },[])
 
 
@@ -44,17 +43,31 @@ async function getAudio(){
         
   function handlePlaySound({name, action}){
        
-   if(name ===0){
+   const audioRuning = String(audioToBePlay[index]?._filename).split('/').at(-1); 
+
+
+ if(name === audioRuning){
+
     if(action ==='play'){
-      
-      console.log(action)
-      isReady.play(); 
-      isReady.setSpeed(0.8)
+
+
+      if(listOfPlaying.length){
+         console.log(listOfPlaying, 'index that is on the list')
+         audioToBePlay[listOfPlaying[0]].stop(); 
+         setListOfPlaying([]); 
+        
+      }
+
+     // audioToBePlay[index].setCurrentTime(5)
+      audioToBePlay[index].play(); 
+      audioToBePlay[index].setSpeed(0.8)
+      setListOfPlaying([index]); 
+   
     }
 
+
     if(action ==='stop'){
-      
-      isReady.stop(); 
+      audioToBePlay[index].stop(); 
 
     }
    } 
@@ -67,13 +80,13 @@ async function getDiccionaryData() {
 
   try {
 
-    const saveLocation = `${DocumentDirectoryPath}/singularAndPluralNouns2.mp3`; 
+    const saveLocation = `${DocumentDirectoryPath}/Singularandpluralnouns1.mp3`; 
     const outputUnzip = `${DocumentDirectoryPath}`; 
 
   
 
     const res = await downloadFile({
-        fromUrl:'https://www.dropbox.com/scl/fi/6onru084ogfmntlg3xsgv/ElevenLabs_2024-01-13T14_29_28_Serena.mp3?rlkey=syuo0a0y5o4qglwyje8sazm7d&dl=1',
+        fromUrl:'https://www.dropbox.com/scl/fi/vdlp9km4aur19kqv7nc0i/ElevenLabs_2024-01-13T14_26_13_Michael.mp3?rlkey=aeehi136ayrqcuabj5zd0l5f0&dl=1',
         toFile:saveLocation,
         background:true,
         begin:(res )=>{
@@ -106,19 +119,56 @@ async function getDiccionaryData() {
 
 }
 
+function openShowOption(){
+ // setShowOption(null)
+  setShowOption([index])
+  //console.log(showOption)
+ 
+}
+
+//
+
   return (
     
-        <View style={styles.topicbtnContainer}>
-             <TouchableOpacity style={styles.topicContainerbtn} onPress={()=>  getDiccionaryData()}>
-                <Ionicons name="arrow-down-circle" size={wp('7%')} color={'#000'} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.topicContainerbtn} onPress={()=>  handlePlaySound({name:0, action:'stop'})}>
-                <Ionicons name="stop" size={wp('7%')} color={'#000'} />
-              </TouchableOpacity>
-              <TouchableOpacity style={styles.topicContainerbtn} onPress={()=> handlePlaySound({name:0, action:'play'})}>
-                <Ionicons name="play-circle" size={wp('7%')} color={'#000'} />
-              </TouchableOpacity>
-       </View>
+        <View style={styles.Container}>
+          
+            {showOption.includes(index) ?(
+             <View style={styles.topicbtnContainer}>
+                <TouchableOpacity style={styles.topicContainerbtn} onPress={()=>  getDiccionaryData()}>
+                    <FontAwesome5 name="cloud-download-alt" size={wp('6.5%')} color={'#f4f7fa'} />
+                  </TouchableOpacity>
+                 
+                  <TouchableOpacity style={styles.topicContainerbtn}>
+                    <MaterialCommunityIcons name="snail" size={wp('7%')} color={'#414e6e'} />
+                  </TouchableOpacity>
+                 
+                  <TouchableOpacity style={styles.topicContainerbtn}>
+                      <AntDesign name="caretleft" size={wp('7%')} color={'#414e6e'} />
+                  </TouchableOpacity>
+    
+                  <TouchableOpacity style={styles.topicContainerbtn} onPress={()=> handlePlaySound({name:`${nameOfAudio}.mp3`, action:'play', index})}>
+                     <AntDesign name={!listOfPlaying.includes(index)?"play":"pausecircle"} size={wp('7%')} color={'#414e6e'} />
+                  </TouchableOpacity>
+
+                  <TouchableOpacity style={styles.topicContainerbtn}>
+                     <AntDesign name="caretright" size={wp('7%')} color={'#414e6e'} />
+                  </TouchableOpacity>
+                  
+                  <TouchableOpacity style={styles.topicContainerbtn} onPress={()=> setShowOption([])}>
+                    <Ionicons name="close-circle" size={wp('8%')} color={'#f4f7fa'} />
+                  </TouchableOpacity>
+                </View>
+              ):(
+                <TouchableOpacity style={styles.topicContainerbtn} onPress={()=> openShowOption()}>
+                  <Fontisto name="volume-down" size={wp('6%')} color={'#293042'} />
+                </TouchableOpacity>
+              )
+
+            }
+          
+      
+      
+        </View>
 
   );
 }
@@ -126,65 +176,32 @@ async function getDiccionaryData() {
 
 
 const styles = StyleSheet.create({
-
-    body:{
-        flex:1,
-        backgroundColor:'#8daeec'
-       // backgroundColor:'#e2ebf7'
-    }, 
-    scrollContainer:{
-    
-        paddingBottom:wp('20%')
-      }, 
-    bodyCard:{
-      width:wp('96%'),
-      height:wp('30%'), 
-      backgroundColor:'#e2ebf7',  
-      marginHorizontal:wp('2%'), 
-      marginVertical:wp('1%'), 
-      borderRadius:wp('3%'),
-      paddingHorizontal:wp('5%'), 
-      elevation:6
-    }, 
-    bodyCardTitle:{
-      fontSize:wp('5%'), 
-      textAlign:'center', 
-      marginVertical:wp('2%'), 
-      fontWeight:'bold', 
-      color:'#000', 
-      textDecorationLine:'underline'
-    },
-    bodyCardText:{
-        color:'#000', 
-         fontSize:wp('4%'),
-         fontWeight:'bold',
-         textAlign:'center'
-    },
-    topicContainer:{
-        backgroundColor:'#e2ebf7', 
-        margin:wp('2%'), 
-        padding:wp('4%'), 
-        borderRadius:wp('3%'),
-        elevation:6
-    }, 
-    topicContainerTitle:{
-      fontSize:wp('5%'), 
-      textAlign:'center', 
-      fontWeight:'bold', 
-      color:'#000'
-    }, 
-    topicContainerText:{
-      fontSize:wp('4.5%'),
-      color:'#000'
-    },
+  Container:{
+  //  zIndex:-1,
+    position:'relative',
+    left:wp('-2%'),
+    top:wp('-4%'),
+    width:wp('100%'),
+    height:wp('13%'),
+    flexDirection:'row',
+    justifyContent:'flex-end',
+    alignItems:'center',
+    backgroundColor:'#9cb6dd',
+    //marginBottom:wp('0.2%')
+  },
     topicbtnContainer:{
-      flex:1,
+      position:'absolute',
+      width:wp('100%'),
+      height:wp('10%'),
       flexDirection:'row',
+     // backgroundColor:'#3f4b69',
+      marginBottom:wp('1%'),
       justifyContent:'flex-end',
-      alignItems:'flex-end'
+      alignItems:'center', 
+      paddingHorizontal:wp('3%')
     },
     topicContainerbtn:{
-      marginHorizontal:wp('2%')
+      marginHorizontal:wp('1.5%')
      
     }
 })

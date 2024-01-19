@@ -7,41 +7,41 @@ import {bookIcon} from '../../../image';
 
 
 export function GrammarList(props){
-
+  
     const {navigation} = props; 
     const data = [ 
-         {title:'Singular and plural nouns', navigation:'singularAndPluralNouns'}, 
-         {title:'The indefinite article (a/an)', navigation:'idefiniteArticle'},
-         {title:'The article “the”', navigation:'articleThe'},
-         {title:'Pronoun', navigation:'pronoun'}, 
-         {title:'Present simple', navigation:'presentSimple'},
-         {title:'Preposition', navigation:'preposition'},
-         {title:'Prepositions of place (in, at, on)', navigation:'prepositionsOfPlace'},
-         {title:'Prepositions of time (in, at, on)', navigation:'prepositionsOfTime'},
-         {title:'Present continuous', navigation:'presentContinuous'}, 
-         {title:'Past simple', navigation:'pastSimple'},
-         {title:'Past continuous', navigation:'pastContinuous'},
-         {title:'Past continuous vs simple past', navigation:'pastContinuousSimplePast'},
-         {title:'Future simple', navigation:'futureSimple'}, 
-         {title:'Be Going to', navigation:'beGoingTo'},
-         {title:'Future continuous', navigation:'futureContinuous'},
-         {title:'Pasts of speech', navigation:'partsOfSpeech'},
-         {title:'Adjective', navigation:'adjective'},
-         {title:'Superlative adjectives', navigation:'superlativeAdjectives'},
-         {title:'Usage of Do-Make', navigation:'usageOfDoMake'}, 
-         {title:'Adverb', navigation:'adverb'}, 
-         {title:'Possessive adjectives', navigation:'possessiveAdjectives'}, 
-         {title:'Possessive pronouns', navigation:'possessivePronouns'}, 
-         {title:'Reflexive pronouns', navigation:'reflexivePronouns'}, 
-         {title:'Modal auxiliaries', navigation:'modalAuxiliaries'}, 
-         {title:'Present perfect', navigation:'presentPerfect'}, 
-         {title:'Past perfect', navigation:'pastPerfect'}, 
-         {title:'Future perfect', navigation:'futurePerfect'}, 
-         {title:'Conditionals', navigation:'conditionals'}, 
-         {title:'Question Tang', navigation:'questionTang'},
-         {title:'Gerunds', navigation:'gerunds'},
-         {title:'Reported Speech', navigation:'reportedSpeech'},
-         {title:'Active Or Passive Voice', navigation:'activeOrPassiveVoice'},
+         {title:'Singular and plural nouns', navigation:'viewTopic'}, 
+         {title:'The indefinite article (a/an)', navigation:'viewTopic'},
+         {title:'The article “the”', navigation:'viewTopic'},
+         {title:'Pronoun', navigation:'viewTopic'}, 
+         {title:'Present simple', navigation:'viewTopic'},
+         {title:'Preposition', navigation:'viewTopic'},
+         {title:'Prepositions of place (in, at, on)', navigation:'viewTopic'},
+         {title:'Prepositions of time (in, at, on)', navigation:'viewTopic'},
+         {title:'Present continuous', navigation:'viewTopic'}, 
+         {title:'Past simple', navigation:'viewTopic'},
+         {title:'Past continuous', navigation:'viewTopic'},
+         {title:'Past continuous vs simple past', navigation:'viewTopic'},
+         {title:'Future simple', navigation:'viewTopic'}, 
+         {title:'Be Going to', navigation:'viewTopic'},
+         {title:'Future continuous', navigation:'viewTopic'},
+         {title:'Pasts of speech', navigation:'viewTopic'},
+         {title:'Adjective', navigation:'viewTopic'},
+         {title:'Superlative adjectives', navigation:'viewTopic'},
+         {title:'Usage of Do-Make', navigation:'viewTopic'}, 
+         {title:'Adverb', navigation:'viewTopic'}, 
+         {title:'Possessive adjectives', navigation:'viewTopic'}, 
+         {title:'Possessive pronouns', navigation:'viewTopic'}, 
+         {title:'Reflexive pronouns', navigation:'viewTopic'}, 
+         {title:'Modal auxiliaries', navigation:'viewTopic'}, 
+         {title:'Present perfect', navigation:'viewTopic'}, 
+         {title:'Past perfect', navigation:'viewTopic'}, 
+         {title:'Future perfect', navigation:'viewTopic'}, 
+         {title:'Conditionals', navigation:'viewTopic'}, 
+         {title:'Question Tang', navigation:'viewTopic'},
+         {title:'Gerunds', navigation:'viewTopic'},
+         {title:'Reported Speech', navigation:'viewTopic'},
+         {title:'Active Or Passive Voice', navigation:'viewTopic'},
 
          //Active or passive voice
       ]
@@ -54,7 +54,7 @@ export function GrammarList(props){
                     {data.map((list, index)=>
                      <TouchableOpacity key={index} 
                        style={styles.card} 
-                       onPress={()=> navigation.navigate(list.navigation)}>
+                       onPress={()=> navigation.navigate(list.navigation, {title:list.title})}>
                         <Image style={styles.cardIcon} source={bookIcon}/>
                         <Text style={styles.cardText}>{list.title}</Text>
                      </TouchableOpacity>

@@ -1,0 +1,10 @@
+table:[
+    {first:"Affirmative", second:"Negative", third:'Question'},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+    {first:"", second:"", third:""},
+  ]
