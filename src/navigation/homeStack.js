@@ -2,8 +2,9 @@ import * as React from 'react';
 //import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import { Easing } from 'react-native';
-import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView, RenderAllPhaseView } from '../pages/grammar/dist';
+import { Grammar, GrammarList, ExerciseView, FavoriteView, PhraseView, RenderAllPhaseView, Listening, ListeningView} from '../pages/grammar/dist';
 import { ViewTopic} from '../pages/grammar/topic';
+
 
 
 const Stack = createStackNavigator();
@@ -84,8 +85,19 @@ export function HomeStack() {
           component={ViewTopic}
           options={{ headerShown: false }}
         /> 
+      
+      <Stack.Screen
+          name="listening"
+          component={Listening}
+          options={{ headerShown: false }}
+        /> 
 
-
+      <Stack.Screen
+          name="listeningView"
+          component={ListeningView}
+          options={{ headerShown: false }}
+        /> 
+  
 
     </Stack.Navigator>
 

@@ -1,10 +1,10 @@
 import {View, Text} from 'react-native'; 
 
 
-export function Listening(){
+export function Dictionary(){
     return(
         <View>
-            <Text>Listening</Text>
+            <Text>Dictionary</Text>
         </View>
     )
 }

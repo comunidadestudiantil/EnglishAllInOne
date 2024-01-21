@@ -3,7 +3,7 @@ import * as React from 'react';
 import { createStackNavigator, CardStyleInterpolators } from '@react-navigation/stack';
 import { Easing } from 'react-native';
 import {Vocabulary, NounsVocabulary, VocabularyListView, 
-        VerbVocabulary, AdjectivesVocabulary
+        VerbVocabulary, AdjectivesVocabulary, AdverbsView
        } from '../pages/vocabulary';
 
 const Stack = createStackNavigator();
@@ -74,7 +74,13 @@ export function VocabularyStack() {
           component={AdjectivesVocabulary} 
           options={{headerShown: false}}
        />
-        
+       
+       <Stack.Screen 
+          name="adverbsView" 
+          component={AdverbsView} 
+          options={{headerShown: false}}
+       />
+
       </Stack.Navigator>
    
   )

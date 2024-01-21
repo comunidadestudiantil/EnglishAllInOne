@@ -1,7 +1,7 @@
 import {LinearGradient} from '../../../utils/linearGradient';
 import {hp, wp} from '../../../utils/responsive';
 import {HomeHeader} from '../../../components/header';
-import {bookIcon, favoriteIcon, phraseIcon, practiceIcon} from '../../../image';
+import {bookIcon, favoriteIcon, phraseIcon, practiceIcon, audioLibro} from '../../../image';
 import {View, Text, StyleSheet, Image, TouchableOpacity, StatusBar} from 'react-native';
 
 
@@ -34,9 +34,9 @@ export function Grammar(props){
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={styles.secction}
-                    onPress={()=> navigation.navigate('favoriteView')} >
-                    <Image style={styles.secctionIcon} source={favoriteIcon}/>
-                    <Text style={styles.secctionText}>Favorite</Text>
+                    onPress={()=> navigation.navigate('listening')} >
+                    <Image style={styles.secctionIcon} source={audioLibro}/>
+                    <Text style={styles.secctionText}>Listening</Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
                    style={styles.secctionTwo}

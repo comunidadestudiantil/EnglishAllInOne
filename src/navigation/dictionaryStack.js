@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { createNativeStackNavigator} from '@react-navigation/native-stack';
 import { Easing } from 'react-native';
-import {Listening} from '../pages/listening/listening';
+import {Dictionary} from '../pages/dictionary/dictionary';
 
 const Stack = createNativeStackNavigator();
 
 
-export function ListeningStack() {
+export function DictionaryStack() {
 
   const config = {
       animation: 'timing',
@@ -44,8 +44,8 @@ export function ListeningStack() {
       >
 
         <Stack.Screen 
-          name="listening" 
-          component={Listening} 
+          name="dictionary" 
+          component={Dictionary} 
           options={{headerShown: false}}
         />
         

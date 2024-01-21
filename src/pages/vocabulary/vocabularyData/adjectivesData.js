@@ -1,1059 +1,657 @@
 export const adjectivesData =[
-    {
-        "first": "different",
-        "second": "used"
-    },
-    {
-        "first": "important",
-        "second": "every"
-    },
-    {
-        "first": "large",
-        "second": "available"
-    },
-    {
-        "first": "popular",
-        "second": "able"
-    },
-    {
-        "first": "basic",
-        "second": "known"
-    },
-    {
-        "first": "various",
-        "second": "difficult"
-    },
-    {
-        "first": "several",
-        "second": "united"
-    },
-    {
-        "first": "historical",
-        "second": "hot"
-    },
-    {
-        "first": "useful",
-        "second": "mental"
-    },
-    {
-        "first": "scared",
-        "second": "additional"
-    },
-    {
-        "first": "emotional",
-        "second": "old"
-    },
-    {
-        "first": "political",
-        "second": "similar"
-    },
-    {
-        "first": "healthy",
-        "second": "financial"
-    },
-    {
-        "first": "medical",
-        "second": "traditional"
-    },
-    {
-        "first": "federal",
-        "second": "entire"
-    },
-    {
-        "first": "strong",
-        "second": "actual"
-    },
-    {
-        "first": "significant",
-        "second": "successful"
-    },
-    {
-        "first": "electrical",
-        "second": "expensive"
-    },
-    {
-        "first": "pregnant",
-        "second": "intelligent"
-    },
-    {
-        "first": "interesting",
-        "second": "poor"
-    },
-    {
-        "first": "happy",
-        "second": "responsible"
-    },
-    {
-        "first": "cute",
-        "second": "helpful"
-    },
-    {
-        "first": "recent",
-        "second": "willing"
-    },
-    {
-        "first": "nice",
-        "second": "wonderful"
-    },
-    {
-        "first": "impossible",
-        "second": "serious"
-    },
-    {
-        "first": "huge",
-        "second": "rare"
-    },
-    {
-        "first": "technical",
-        "second": "typical"
-    },
-    {
-        "first": "competitive",
-        "second": "critical"
-    },
-    {
-        "first": "electronic",
-        "second": "immediate"
-    },
-    {
-        "first": "aware",
-        "second": "educational"
-    },
-    {
-        "first": "environmental",
-        "second": "global"
-    },
-    {
-        "first": "legal",
-        "second": "relevant"
-    },
-    {
-        "first": "accurate",
-        "second": "capable"
-    },
-    {
-        "first": "dangerous",
-        "second": "dramatic"
-    },
-    {
-        "first": "efficient",
-        "second": "powerful"
-    },
-    {
-        "first": "foreign",
-        "second": "hungry"
-    },
-    {
-        "first": "practical",
-        "second": "psychological"
-    },
-    {
-        "first": "severe",
-        "second": "suitable"
-    },
-    {
-        "first": "numerous",
-        "second": "sufficient"
-    },
-    {
-        "first": "unusual",
-        "second": "consistent"
-    },
-    {
-        "first": "cultural",
-        "second": "existing"
-    },
-    {
-        "first": "famous",
-        "second": "pure"
-    },
-    {
-        "first": "afraid",
-        "second": "obvious"
-    },
-    {
-        "first": "careful",
-        "second": "latter"
-    },
-    {
-        "first": "unhappy",
-        "second": "acceptable"
-    },
-    {
-        "first": "aggressive",
-        "second": "boring"
-    },
-    {
-        "first": "distinct",
-        "second": "eastern"
-    },
-    {
-        "first": "logical",
-        "second": "reasonable"
-    },
-    {
-        "first": "strict",
-        "second": "administrative"
-    },
-    {
-        "first": "automatic",
-        "second": "civil"
-    },
-    {
-        "first": "former",
-        "second": "massive"
-    },
-    {
-        "first": "southern",
-        "second": "unfair"
-    },
-    {
-        "first": "visible",
-        "second": "alive"
-    },
-    {
-        "first": "angry",
-        "second": "desperate"
-    },
-    {
-        "first": "exciting",
-        "second": "friendly"
-    },
-    {
-        "first": "lucky",
-        "second": "realistic"
-    },
-    {
-        "first": "sorry",
-        "second": "ugly"
-    },
-    {
-        "first": "unlikely",
-        "second": "anxious"
-    },
-    {
-        "first": "comprehensive",
-        "second": "curious"
-    },
-    {
-        "first": "impressive",
-        "second": "informal"
-    },
-    {
-        "first": "inner",
-        "second": "pleasant"
-    },
-    {
-        "first": "sexual",
-        "second": "sudden"
-    },
-    {
-        "first": "terrible",
-        "second": "unable"
-    },
-    {
-        "first": "weak",
-        "second": "wooden"
-    },
-    {
-        "first": "asleep",
-        "second": "confident"
-    },
-    {
-        "first": "conscious",
-        "second": "decent"
-    },
-    {
-        "first": "embarrassed",
-        "second": "guilty"
-    },
-    {
-        "first": "lonely",
-        "second": "mad"
-    },
-    {
-        "first": "nervous",
-        "second": "odd"
-    },
-    {
-        "first": "remarkable",
-        "second": "substantial"
-    },
-    {
-        "first": "suspicious",
-        "second": "tall"
-    },
-    {
-        "first": "tiny",
-        "second": "more"
-    },
-    {
-        "first": "some",
-        "second": "one"
-    },
-    {
-        "first": "all",
-        "second": "many"
-    },
-    {
-        "first": "most",
-        "second": "other"
-    },
-    {
-        "first": "such",
-        "second": "even"
-    },
-    {
-        "first": "new",
-        "second": "just"
-    },
-    {
-        "first": "good",
-        "second": "any"
-    },
-    {
-        "first": "each",
-        "second": "much"
-    },
-    {
-        "first": "own",
-        "second": "great"
-    },
-    {
-        "first": "another",
-        "second": "same"
-    },
-    {
-        "first": "few",
-        "second": "free"
-    },
-    {
-        "first": "right",
-        "second": "still"
-    },
-    {
-        "first": "best",
-        "second": "public"
-    },
-    {
-        "first": "human",
-        "second": "both"
-    },
-    {
-        "first": "local",
-        "second": "sure"
-    },
-    {
-        "first": "better",
-        "second": "general"
-    },
-    {
-        "first": "specific",
-        "second": "enough"
-    },
-    {
-        "first": "long",
-        "second": "small"
-    },
-    {
-        "first": "less",
-        "second": "high"
-    },
-    {
-        "first": "certain",
-        "second": "little"
-    },
-    {
-        "first": "common",
-        "second": "next"
-    },
-    {
-        "first": "simple",
-        "second": "hard"
-    },
-    {
-        "first": "past",
-        "second": "big"
-    },
-    {
-        "first": "possible",
-        "second": "particular"
-    },
-    {
-        "first": "real",
-        "second": "major"
-    },
-    {
-        "first": "personal",
-        "second": "current"
-    },
-    {
-        "first": "left",
-        "second": "national"
-    },
-    {
-        "first": "least",
-        "second": "natural"
-    },
-    {
-        "first": "physical",
-        "second": "short"
-    },
-    {
-        "first": "last",
-        "second": "single"
-    },
-    {
-        "first": "individual",
-        "second": "main"
-    },
-    {
-        "first": "potential",
-        "second": "professional"
-    },
-    {
-        "first": "international",
-        "second": "lower"
-    },
-    {
-        "first": "open",
-        "second": "according"
-    },
-    {
-        "first": "alternative",
-        "second": "special"
-    },
-    {
-        "first": "working",
-        "second": "true"
-    },
-    {
-        "first": "whole",
-        "second": "clear"
-    },
-    {
-        "first": "dry",
-        "second": "easy"
-    },
-    {
-        "first": "cold",
-        "second": "commercial"
-    },
-    {
-        "first": "full",
-        "second": "low"
-    },
-    {
-        "first": "primary",
-        "second": "worth"
-    },
-    {
-        "first": "necessary",
-        "second": "positive"
-    },
-    {
-        "first": "present",
-        "second": "close"
-    },
-    {
-        "first": "creative",
-        "second": "green"
-    },
-    {
-        "first": "late",
-        "second": "fit"
-    },
-    {
-        "first": "glad",
-        "second": "proper"
-    },
-    {
-        "first": "complex",
-        "second": "content"
-    },
-    {
-        "first": "due",
-        "second": "effective"
-    },
-    {
-        "first": "middle",
-        "second": "regular"
-    },
-    {
-        "first": "fast",
-        "second": "independent"
-    },
-    {
-        "first": "original",
-        "second": "wide"
-    },
-    {
-        "first": "beautiful",
-        "second": "complete"
-    },
-    {
-        "first": "active",
-        "second": "negative"
-    },
-    {
-        "first": "safe",
-        "second": "visual"
-    },
-    {
-        "first": "wrong",
-        "second": "ago"
-    },
-    {
-        "first": "quick",
-        "second": "ready"
-    },
-    {
-        "first": "straight",
-        "second": "white"
-    },
-    {
-        "first": "direct",
-        "second": "excellent"
-    },
-    {
-        "first": "extra",
-        "second": "junior"
-    },
-    {
-        "first": "pretty",
-        "second": "unique"
-    },
-    {
-        "first": "classic",
-        "second": "final"
-    },
-    {
-        "first": "overall",
-        "second": "private"
-    },
-    {
-        "first": "separate",
-        "second": "western"
-    },
-    {
-        "first": "alone",
-        "second": "familiar"
-    },
-    {
-        "first": "official",
-        "second": "perfect"
-    },
-    {
-        "first": "bright",
-        "second": "broad"
-    },
-    {
-        "first": "comfortable",
-        "second": "flat"
-    },
-    {
-        "first": "rich",
-        "second": "warm"
-    },
-    {
-        "first": "young",
-        "second": "heavy"
-    },
-    {
-        "first": "valuable",
-        "second": "correct"
-    },
-    {
-        "first": "leading",
-        "second": "slow"
-    },
-    {
-        "first": "clean",
-        "second": "fresh"
-    },
-    {
-        "first": "normal",
-        "second": "secret"
-    },
-    {
-        "first": "tough",
-        "second": "brown"
-    },
-    {
-        "first": "cheap",
-        "second": "deep"
-    },
-    {
-        "first": "objective",
-        "second": "secure"
-    },
-    {
-        "first": "thin",
-        "second": "chemical"
-    },
-    {
-        "first": "cool",
-        "second": "extreme"
-    },
-    {
-        "first": "exact",
-        "second": "fair"
-    },
-    {
-        "first": "fine",
-        "second": "formal"
-    },
-    {
-        "first": "opposite",
-        "second": "remote"
-    },
-    {
-        "first": "total",
-        "second": "vast"
-    },
-    {
-        "first": "lost",
-        "second": "smooth"
-    },
-    {
-        "first": "dark",
-        "second": "double"
-    },
-    {
-        "first": "equal",
-        "second": "firm"
-    },
-    {
-        "first": "frequent",
-        "second": "internal"
-    },
-    {
-        "first": "sensitive",
-        "second": "constant"
-    },
-    {
-        "first": "minor",
-        "second": "previous"
-    },
-    {
-        "first": "raw",
-        "second": "soft"
-    },
-    {
-        "first": "solid",
-        "second": "weird"
-    },
-    {
-        "first": "amazing",
-        "second": "annual"
-    },
-    {
-        "first": "busy",
-        "second": "dead"
-    },
-    {
-        "first": "false",
-        "second": "round"
-    },
-    {
-        "first": "sharp",
-        "second": "thick"
-    },
-    {
-        "first": "wise",
-        "second": "equivalent"
-    },
-    {
-        "first": "initial",
-        "second": "narrow"
-    },
-    {
-        "first": "nearby",
-        "second": "proud"
-    },
-    {
-        "first": "spiritual",
-        "second": "wild"
-    },
-    {
-        "first": "adult",
-        "second": "apart"
-    },
-    {
-        "first": "brief",
-        "second": "crazy"
-    },
-    {
-        "first": "prior",
-        "second": "rough"
-    },
-    {
-        "first": "sad",
-        "second": "sick"
-    },
-    {
-        "first": "strange",
-        "second": "external"
-    },
-    {
-        "first": "illegal",
-        "second": "loud"
-    },
-    {
-        "first": "mobile",
-        "second": "nasty"
-    },
-    {
-        "first": "ordinary",
-        "second": "royal"
-    },
-    {
-        "first": "senior",
-        "second": "super"
-    },
-    {
-        "first": "tight",
-        "second": "upper"
-    },
-    {
-        "first": "yellow",
-        "second": "dependent"
-    },
-    {
-        "first": "funny",
-        "second": "gross"
-    },
-    {
-        "first": "ill",
-        "second": "spare"
-    },
-    {
-        "first": "sweet",
-        "second": "upstairs"
-    },
-    {
-        "first": "usual",
-        "second": "brave"
-    },
-    {
-        "first": "calm",
-        "second": "dirty"
-    },
-    {
-        "first": "downtown",
-        "second": "grand"
-    },
-    {
-        "first": "honest",
-        "second": "loose"
-    },
-    {
-        "first": "male",
-        "second": "quiet"
-    },
-    {
-        "first": "brilliant",
-        "second": "dear"
-    },
-    {
-        "first": "drunk",
-        "second": "empty"
-    },
-    {
-        "first": "female",
-        "second": "inevitable"
-    },
-    {
-        "first": "neat",
-        "second": "ok"
-    },
-    {
-        "first": "representative",
-        "second": "silly"
-    },
-    {
-        "first": "slight",
-        "second": "smart"
-    },
-    {
-        "first": "stupid",
-        "second": "temporary"
-    },
-    {
-        "first": "weekly",
-        "second": "that"
-    },
-    {
-        "first": "this",
-        "second": "what"
-    },
-    {
-        "first": "which",
-        "second": "time"
-    },
-    {
-        "first": "these",
-        "second": "work"
-    },
-    {
-        "first": "no",
-        "second": "only"
-    },
-    {
-        "first": "then",
-        "second": "first"
-    },
-    {
-        "first": "money",
-        "second": "over"
-    },
-    {
-        "first": "business",
-        "second": "his"
-    },
-    {
-        "first": "game",
-        "second": "think"
-    },
-    {
-        "first": "after",
-        "second": "life"
-    },
-    {
-        "first": "day",
-        "second": "home"
-    },
-    {
-        "first": "economy",
-        "second": "away"
-    },
-    {
-        "first": "either",
-        "second": "fat"
-    },
-    {
-        "first": "key",
-        "second": "training"
-    },
-    {
-        "first": "top",
-        "second": "level"
-    },
-    {
-        "first": "far",
-        "second": "fun"
-    },
-    {
-        "first": "house",
-        "second": "kind"
-    },
-    {
-        "first": "future",
-        "second": "action"
-    },
-    {
-        "first": "live",
-        "second": "period"
-    },
-    {
-        "first": "subject",
-        "second": "mean"
-    },
-    {
-        "first": "stock",
-        "second": "chance"
-    },
-    {
-        "first": "beginning",
-        "second": "upset"
-    },
-    {
-        "first": "chicken",
-        "second": "head"
-    },
-    {
-        "first": "material",
-        "second": "salt"
-    },
-    {
-        "first": "car",
-        "second": "appropriate"
-    },
-    {
-        "first": "inside",
-        "second": "outside"
-    },
-    {
-        "first": "standard",
-        "second": "medium"
-    },
-    {
-        "first": "choice",
-        "second": "north"
-    },
-    {
-        "first": "square",
-        "second": "born"
-    },
-    {
-        "first": "capital",
-        "second": "shot"
-    },
-    {
-        "first": "front",
-        "second": "living"
-    },
-    {
-        "first": "plastic",
-        "second": "express"
-    },
-    {
-        "first": "feeling",
-        "second": "otherwise"
-    },
-    {
-        "first": "plus",
-        "second": "savings"
-    },
-    {
-        "first": "animal",
-        "second": "budget"
-    },
-    {
-        "first": "minute",
-        "second": "character"
-    },
-    {
-        "first": "maximum",
-        "second": "novel"
-    },
-    {
-        "first": "plenty",
-        "second": "select"
-    },
-    {
-        "first": "background",
-        "second": "forward"
-    },
-    {
-        "first": "glass",
-        "second": "joint"
-    },
-    {
-        "first": "master",
-        "second": "red"
-    },
-    {
-        "first": "vegetable",
-        "second": "ideal"
-    },
-    {
-        "first": "kitchen",
-        "second": "mother"
-    },
-    {
-        "first": "party",
-        "second": "relative"
-    },
-    {
-        "first": "signal",
-        "second": "street"
-    },
-    {
-        "first": "connect",
-        "second": "minimum"
-    },
-    {
-        "first": "sea",
-        "second": "south"
-    },
-    {
-        "first": "status",
-        "second": "daughter"
-    },
-    {
-        "first": "hour",
-        "second": "trick"
-    },
-    {
-        "first": "afternoon",
-        "second": "gold"
-    },
-    {
-        "first": "mission",
-        "second": "agent"
-    },
-    {
-        "first": "corner",
-        "second": "east"
-    },
-    {
-        "first": "neither",
-        "second": "parking"
-    },
-    {
-        "first": "routine",
-        "second": "swimming"
-    },
-    {
-        "first": "winter",
-        "second": "airline"
-    },
-    {
-        "first": "designer",
-        "second": "dress"
-    },
-    {
-        "first": "emergency",
-        "second": "evening"
-    },
-    {
-        "first": "extension",
-        "second": "holiday"
-    },
-    {
-        "first": "horror",
-        "second": "mountain"
-    },
-    {
-        "first": "patient",
-        "second": "proof"
-    },
-    {
-        "first": "west",
-        "second": "wine"
-    },
-    {
-        "first": "expert",
-        "second": "native"
-    },
-    {
-        "first": "opening",
-        "second": "silver"
-    },
-    {
-        "first": "waste",
-        "second": "plane"
-    },
-    {
-        "first": "leather",
-        "second": "purple"
-    },
-    {
-        "first": "specialist",
-        "second": "bitter"
-    },
-    {
-        "first": "incident",
-        "second": "motor"
-    },
-    {
-        "first": "pretend",
-        "second": "prize"
-    },
-    {
-        "first": "resident",
-        "second": ""
-    },
-  
+    [
+        "Different",
+        "Used",
+        "Important",
+        "Every",
+        "Large",
+        "Available",
+        "Popular",
+        "Able",
+        "Basic",
+        "Known"
+    ],
+    [
+        "Various",
+        "Difficult",
+        "Several",
+        "United",
+        "Historical",
+        "Hot",
+        "Useful",
+        "Mental",
+        "Scared",
+        "Additional"
+    ],
+    [
+        "Emotional",
+        "Old",
+        "Political",
+        "Similar",
+        "Healthy",
+        "Financial",
+        "Medical",
+        "Traditional",
+        "Federal",
+        "Entire"
+    ],
+    [
+        "Strong",
+        "Actual",
+        "Significant",
+        "Successful",
+        "Electrical",
+        "Expensive",
+        "Pregnant",
+        "Intelligent",
+        "Interesting",
+        "Poor"
+    ],
+    [
+        "Happy",
+        "Responsible",
+        "Cute",
+        "Helpful",
+        "Recent",
+        "Willing",
+        "Nice",
+        "Wonderful",
+        "Impossible",
+        "Serious"
+    ]
+]
+export const adjectivesData2 =[
+    [
+        "Huge",
+        "Rare",
+        "Technical",
+        "Typical",
+        "Competitive",
+        "Critical",
+        "Electronic",
+        "Immediate",
+        "Aware",
+        "Educational"
+    ],
+    [
+        "Environmental",
+        "Global",
+        "Legal",
+        "Relevant",
+        "Accurate",
+        "Capable",
+        "Dangerous",
+        "Dramatic",
+        "Efficient",
+        "Powerful"
+    ],
+    [
+        "Foreign",
+        "Hungry",
+        "Practical",
+        "Psychological",
+        "Severe",
+        "Suitable",
+        "Numerous",
+        "Sufficient",
+        "Unusual",
+        "Consistent"
+    ],
+    [
+        "Cultural",
+        "Existing",
+        "Famous",
+        "Pure",
+        "Afraid",
+        "Obvious",
+        "Careful",
+        "Latter",
+        "Unhappy",
+        "Acceptable"
+    ],
+    [
+        "Aggressive",
+        "Boring",
+        "Distinct",
+        "Eastern",
+        "Logical",
+        "Reasonable",
+        "Strict",
+        "Administrative",
+        "Automatic",
+        "Civil"
+    ]
+]
+export const adjectivesData3 =[
+    [
+        "Former",
+        "Massive",
+        "Southern",
+        "Unfair",
+        "Visible",
+        "Alive",
+        "Angry",
+        "Desperate",
+        "Exciting",
+        "Friendly"
+    ],
+    [
+        "Lucky",
+        "Realistic",
+        "Sorry",
+        "Ugly",
+        "Unlikely",
+        "Anxious",
+        "Comprehensive",
+        "Curious",
+        "Impressive",
+        "Informal"
+    ],
+    [
+        "Inner",
+        "Pleasant",
+        "Sexual",
+        "Sudden",
+        "Terrible",
+        "Unable",
+        "Weak",
+        "Wooden",
+        "Asleep",
+        "Confident"
+    ],
+    [
+        "Conscious",
+        "Decent",
+        "Embarrassed",
+        "Guilty",
+        "Lonely",
+        "Mad",
+        "Nervous",
+        "Odd",
+        "Remarkable",
+        "Substantial"
+    ],
+    [
+        "Suspicious",
+        "Tall",
+        "Tiny",
+        "More",
+        "Some",
+        "One",
+        "All",
+        "Many",
+        "Most",
+        "Other"
+    ]
+]
+export const adjectivesData4 =[
+    [
+        "Such",
+        "Even",
+        "New",
+        "Just",
+        "Good",
+        "Any",
+        "Each",
+        "Much",
+        "Own",
+        "Great"
+    ],
+    [
+        "Another",
+        "Same",
+        "Few",
+        "Free",
+        "Right",
+        "Still",
+        "Best",
+        "Public",
+        "Human",
+        "Both"
+    ],
+    [
+        "Local",
+        "Sure",
+        "Better",
+        "General",
+        "Specific",
+        "Enough",
+        "Long",
+        "Small",
+        "Less",
+        "High"
+    ],
+    [
+        "Certain",
+        "Little",
+        "Common",
+        "Next",
+        "Simple",
+        "Hard",
+        "Past",
+        "Big",
+        "Possible",
+        "Particular"
+    ],
+    [
+        "Real",
+        "Major",
+        "Personal",
+        "Current",
+        "Left",
+        "National",
+        "Least",
+        "Natural",
+        "Physical",
+        "Short"
+    ]
+]
+export const adjectivesData5 =[
+    [
+        "Last",
+        "Single",
+        "Individual",
+        "Main",
+        "Potential",
+        "Professional",
+        "International",
+        "Lower",
+        "Open",
+        "According"
+    ],
+    [
+        "Alternative",
+        "Special",
+        "Working",
+        "True",
+        "Whole",
+        "Clear",
+        "Dry",
+        "Easy",
+        "Cold",
+        "Commercial"
+    ],
+    [
+        "Full",
+        "Low",
+        "Primary",
+        "Worth",
+        "Necessary",
+        "Positive",
+        "Present",
+        "Close",
+        "Creative",
+        "Green"
+    ],
+    [
+        "Late",
+        "Fit",
+        "Glad",
+        "Proper",
+        "Complex",
+        "Content",
+        "Due",
+        "Effective",
+        "Middle",
+        "Regular"
+    ],
+    [
+        "Fast",
+        "Independent",
+        "Original",
+        "Wide",
+        "Beautiful",
+        "Complete",
+        "Active",
+        "Negative",
+        "Safe",
+        "Visual"
+    ]
+]
+export const adjectivesData6 =[
+    [
+        "Wrong",
+        "Ago",
+        "Quick",
+        "Ready",
+        "Straight",
+        "White",
+        "Direct",
+        "Excellent",
+        "Extra",
+        "Junior"
+    ],
+    [
+        "Pretty",
+        "Unique",
+        "Classic",
+        "Final",
+        "Overall",
+        "Private",
+        "Separate",
+        "Western",
+        "Alone",
+        "Familiar"
+    ],
+    [
+        "Official",
+        "Perfect",
+        "Bright",
+        "Broad",
+        "Comfortable",
+        "Flat",
+        "Rich",
+        "Warm",
+        "Young",
+        "Heavy"
+    ],
+    [
+        "Valuable",
+        "Correct",
+        "Leading",
+        "Slow",
+        "Clean",
+        "Fresh",
+        "Normal",
+        "Secret",
+        "Tough",
+        "Brown"
+    ],
+    [
+        "Cheap",
+        "Deep",
+        "Objective",
+        "Secure",
+        "Thin",
+        "Chemical",
+        "Cool",
+        "Extreme",
+        "Exact",
+        "Fair"
+    ]
+]
+export const adjectivesData7 =[
+    [
+        "Fine",
+        "Formal",
+        "Opposite",
+        "Remote",
+        "Total",
+        "Vast",
+        "Lost",
+        "Smooth",
+        "Dark",
+        "Double"
+    ],
+    [
+        "Equal",
+        "Firm",
+        "Frequent",
+        "Internal",
+        "Sensitive",
+        "Constant",
+        "Minor",
+        "Previous",
+        "Raw",
+        "Soft"
+    ],
+    [
+        "Solid",
+        "Weird",
+        "Amazing",
+        "Annual",
+        "Busy",
+        "Dead",
+        "False",
+        "Round",
+        "Sharp",
+        "Thick"
+    ],
+    [
+        "Wise",
+        "Equivalent",
+        "Initial",
+        "Narrow",
+        "Nearby",
+        "Proud",
+        "Spiritual",
+        "Wild",
+        "Adult",
+        "Apart"
+    ],
+    [
+        "Brief",
+        "Crazy",
+        "Prior",
+        "Rough",
+        "Sad",
+        "Sick",
+        "Strange",
+        "External",
+        "Illegal",
+        "Loud"
+    ]
+]
+export const adjectivesData8 =[
+    [
+        "Mobile",
+        "Nasty",
+        "Ordinary",
+        "Royal",
+        "Senior",
+        "Super",
+        "Tight",
+        "Upper",
+        "Yellow",
+        "Dependent"
+    ],
+    [
+        "Funny",
+        "Gross",
+        "Ill",
+        "Spare",
+        "Sweet",
+        "Upstairs",
+        "Usual",
+        "Brave",
+        "Calm",
+        "Dirty"
+    ],
+    [
+        "Downtown",
+        "Grand",
+        "Honest",
+        "Loose",
+        "Male",
+        "Quiet",
+        "Brilliant",
+        "Dear",
+        "Drunk",
+        "Empty"
+    ],
+    [
+        "Female",
+        "Inevitable",
+        "Neat",
+        "Ok",
+        "Representative",
+        "Silly",
+        "Slight",
+        "Smart",
+        "Stupid",
+        "Temporary"
+    ],
+    [
+        "Weekly",
+        "That",
+        "This",
+        "What",
+        "Which",
+        "Time",
+        "These",
+        "Work",
+        "No",
+        "Only"
+    ]
+]
+export const adjectivesData9 =[
+    [
+        "Then",
+        "First",
+        "Money",
+        "Over",
+        "Business",
+        "His",
+        "Game",
+        "Think",
+        "After",
+        "Life"
+    ],
+    [
+        "Day",
+        "Home",
+        "Economy",
+        "Away",
+        "Either",
+        "Fat",
+        "Key",
+        "Training",
+        "Top",
+        "Level"
+    ],
+    [
+        "Far",
+        "Fun",
+        "House",
+        "Kind",
+        "Future",
+        "Action",
+        "Live",
+        "Period",
+        "Subject",
+        "Mean"
+    ],
+    [
+        "Stock",
+        "Chance",
+        "Beginning",
+        "Upset",
+        "Chicken",
+        "Head",
+        "Material",
+        "Salt",
+        "Car",
+        "Appropriate"
+    ],
+    [
+        "Inside",
+        "Outside",
+        "Standard",
+        "Medium",
+        "Choice",
+        "North",
+        "Square",
+        "Born",
+        "Capital",
+        "Shot"
+    ]
+]
+export const adjectivesData10 =[
+    [
+        "Front",
+        "Living",
+        "Plastic",
+        "Express",
+        "Feeling",
+        "Otherwise",
+        "Plus",
+        "Savings",
+        "Animal",
+        "Budget"
+    ],
+    [
+        "Minute",
+        "Character",
+        "Maximum",
+        "Novel",
+        "Plenty",
+        "Select",
+        "Background",
+        "Forward",
+        "Glass",
+        "Joint"
+    ],
+    [
+        "Master",
+        "Red",
+        "Vegetable",
+        "Ideal",
+        "Kitchen",
+        "Mother",
+        "Party",
+        "Relative",
+        "Signal",
+        "Street"
+    ],
+    [
+        "Connect",
+        "Minimum",
+        "Sea",
+        "South",
+        "Status",
+        "Daughter",
+        "Hour",
+        "Trick",
+        "Afternoon",
+        "Gold"
+    ],
+    [
+        "Mission",
+        "Agent",
+        "Corner",
+        "East",
+        "Neither",
+        "Parking",
+        "Routine",
+        "Swimming",
+        "Winter",
+        "Airline"
+    ]
+]
+export const adjectivesData11 =[
+    [
+        "Designer",
+        "Dress",
+        "Emergency",
+        "Evening",
+        "Extension",
+        "Holiday",
+        "Horror",
+        "Mountain",
+        "Patient",
+        "Proof"
+    ],
+    [
+        "West",
+        "Wine",
+        "Expert",
+        "Native",
+        "Opening",
+        "Silver",
+        "Waste",
+        "Plane",
+        "Leather",
+        "Purple"
+    ],
+    [
+        "Specialist",
+        "Bitter",
+        "Incident",
+        "Motor",
+        "Pretend",
+        "Prize",
+        "Resident",
+        ""
+
+    ]
 ]

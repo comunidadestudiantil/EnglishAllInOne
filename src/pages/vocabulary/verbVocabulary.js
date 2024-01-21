@@ -10,20 +10,10 @@ import {CardHeader} from './cardHeader';
 //Verb
 export function VerbVocabulary(props) {
   const {navigation} = props;
-  const [data, setData] = useState([])
+  const [data, setData] = useState(verbData)
   const [showLoading, setShowLoanding] = useState(false);
   const [showIcon, setShowIcon] = useState([]);
 
- useEffect(()=>{
-
-   setShowLoanding(true); 
-    setTimeout(()=>{
-      setShowLoanding(false); 
-      setData(verbData); 
-    
-    },0)
-    
- },[]) 
 
   return (
     <View style={styles.container}>
@@ -38,16 +28,19 @@ export function VerbVocabulary(props) {
         </View>
         {
           data.map((list, index) => (
-            <View key={index} style={[styles.card, index %10 ===0 && {marginTop:wp('15%')}]}>
+            <View  key={index}>
               <CardHeader
                visible={index %10 ===0}
                index={index}
                setShowIcon={setShowIcon}
                showIcon={showIcon} 
               />
+               <View style={[styles.card]}>
+              
               <Text selectable style={[styles.cardText,  index %10 ===0 &&{marginTop:wp('2%')}]}>{list.present}</Text>
               <Text selectable style={[styles.cardText,  index %10 ===0 &&{marginTop:wp('2%')}]}>{list.past}</Text>
               <Text selectable style={[styles.cardText,  index %10 ===0  &&{marginTop:wp('2%')}]}>{list.participle}</Text>
+            </View>
             </View>
           ))}
       </ScrollView>
@@ -68,7 +61,7 @@ const styles = StyleSheet.create({
   card: {
     // backgroundColor:'red',
     flexDirection: 'row',
-    paddingHorizontal: wp('1%'),
+   // paddingHorizontal: wp('1%'),
   },
   cardTitle:{
     flexDirection: 'row',

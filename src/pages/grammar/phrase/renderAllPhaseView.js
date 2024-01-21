@@ -5,6 +5,17 @@ import { data } from './dataPhase/index';
 import { hp, wp } from '../../../utils/responsive';
 import { AntDesign, Fontisto, MaterialCommunityIcons } from '../../../utils/icons';
 
+
+function RememberList({data}){
+  return(
+    <>
+       {data.map((list, index)=>
+         <Text key={index} style={styles.text}>{list}</Text>
+        )}
+    </>
+  )
+}
+
 export function RenderAllPhaseView(props) {
     const { navigation, route } = props;
     const [showOption, setShowOption] = useState([])
@@ -53,10 +64,10 @@ export function RenderAllPhaseView(props) {
                                 )}
 
                             </View>
-                            {list.title && <Text selectable={true} style={styles.title}>{list.title}</Text>}
+                            
+                            <RememberList data={list}/>
+                            <Text style={styles.textIndex}>{index + 1}</Text> 
 
-                            <Text selectable={true} style={styles.text}>{list.description}</Text>
-                            <Text style={styles.textIndex}>{index + 1}</Text>
                         </View>
                     )
                 })}
@@ -99,7 +110,8 @@ const styles = StyleSheet.create({
     text: {
         color: '#000',
         fontSize: wp('4.5%'),
-        fontWeight: '500'
+        fontWeight: '500', 
+        paddingVertical:wp('1.5%')
     },
     textIndex: {
         color: '#000',

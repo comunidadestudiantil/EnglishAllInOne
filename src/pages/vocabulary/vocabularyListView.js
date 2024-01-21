@@ -7,21 +7,32 @@ import {AntDesign} from '../../utils/icons';
 import {Loading} from '../../components/alert'; 
 import {CardHeader} from './cardHeader'; 
 
+
+
+function RenderList({data}){
+  
+   return(
+    <View style={styles.card3}>
+       {data.map((list, index)=><Text key={index} style={styles.card3Text}>{list}</Text>)}
+    </View>
+   )
+}
+
 export function VocabularyListView(props) {
   const {navigation, route: {params},} = props;
   const {end, start, title} = params;
-  const [data, setData]= useState([]); 
+  const [data, setData]= useState(vocabularyData[title]); 
   const [showLoading, setShowLoanding] = useState(false);
   const [showIcon, setShowIcon] = useState([]);
   
   useLayoutEffect(()=>{
 
-    setShowLoanding(true);
+    /*setShowLoanding(true);
 
     setTimeout(()=>{
-      setData(vocabularyData[title].slice(start, end)); 
+      setData(); 
       setShowLoanding(false);
-    },0)
+    },0)*/
 
   },[])
   
@@ -31,18 +42,21 @@ export function VocabularyListView(props) {
       <SectionHeader navigation={navigation} title={title} />
       <ScrollView contentContainerStyle={styles.scroll}>
         {data.map((list, index) => {
-           
+          
           return (
-            <View key={index} style={[styles.card, index %10 ===0 && styles.card2]} >
+            <View key={index} style={[styles.card]} >
              
               <CardHeader  
-                visible={index %10 ===0} 
+                visible={true} 
                 index={index}
                 setShowIcon={setShowIcon}
                 showIcon={showIcon}  
               />
-              <Text style={[styles.cardText, {marginLeft:wp('3%')},  index %10 ===0 && {marginTop:wp('2%'),}]}>{list.first}</Text>
-              <Text style={[styles.cardText, {marginRight:wp('3%')}, index %10 ===0 && {marginTop:wp('2%')}]}>{list.second}</Text>
+              <View style={[styles.card2]}>
+                 <RenderList data={list}/>
+              </View>
+             
+              {/* <Text style={[styles.cardText, {marginRight:wp('3%')}, index %10 ===0 && {marginTop:wp('2%')}]}>{second}</Text>*/}
             </View>
           );
         })}
@@ -62,17 +76,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#f2f7fb',
   },
   scroll: {
-    paddingBottom:wp('5%')
+    width:wp('100%'),
+    paddingBottom:wp('5%'), 
+   
   },
 
   card: {
+    flex:1,
     backgroundColor: '#f2f7fb',
+    //margin:wp('1%'), 
+  //  backgroundColor:'red', 
+ 
     //paddingTop:wp('2%'),
-    flexDirection:'row', 
+    
 
   },
   card2:{
-    marginTop:wp('15%'), 
+    width:wp('100$'),
+    flexDirection:'row', 
+    flexWrap:'wrap',
 
   },
   cardHeader:{
@@ -90,13 +112,13 @@ const styles = StyleSheet.create({
      marginHorizontal:wp('2%')
    },
   cardText:{
-    flex:1,
     color:'#000', 
     fontSize:wp('4.5%'), 
     fontWeight:'500', 
     textAlign:'left',
     paddingVertical:wp('1%'), 
     paddingHorizontal:wp('2%'),
+    margin:wp('2%'),
    // borderBottomColor:'#9cb6dd',
     //borderBottomWidth:wp('0.5%'),
     //borderStyle:'dotted'
@@ -111,5 +133,22 @@ const styles = StyleSheet.create({
     fontSize:wp('4%'), 
     
   },
- 
+  card3:{
+     width:wp('100%'),
+    flexDirection:'row',
+    flexWrap:'wrap',
+    justifyContent:'space-between', 
+    paddingHorizontal:wp('2%'), 
+    marginVertical:wp('1%')
+  
+    
+  }, 
+  card3Text:{
+    width:wp('48%'), 
+    backgroundColor:'#d3e3f2', 
+    borderWidth:wp('0.2%'), 
+    padding:wp('2%'), 
+    fontSize:wp('4.5%'), 
+    color:'#000'
+  }
 });

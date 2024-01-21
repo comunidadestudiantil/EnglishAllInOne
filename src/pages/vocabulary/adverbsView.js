@@ -4,34 +4,28 @@ import {hp, wp} from '../../utils/responsive';
 import {MaterialIcons,} from '../../utils/icons'; 
 
 
-export function AdjectivesVocabulary(props){
+export function AdverbsView(props){
 
     const {navigation} = props; 
 
     const sections =[
-        {title:'Adjectives'},
-        {title:'Adjectives (2)'},
-        {title:'Adjectives (3)'},
-        {title:'Adjectives (4)'}, 
-        {title:'Adjectives (5)'}, 
-        {title:'Adjectives (6)'}, 
-        {title:'Adjectives (7)'},
-        {title:'Adjectives (8)'},
-        {title:'Adjectives (9)'}, 
-        {title:'Adjectives (10)'}, 
-        {title:'Adjectives (11)'}, 
+        {title:'Adverbs'},
+        {title:'Adverbs (2)'},
+        {title:'Adverbs (3)'},
+        {title:'Adverbs (4)'}, 
+        {title:'Adverbs (5)'}, 
     ]
 
     
     return (
         <View style={styles.container}> 
-            <SectionHeader navigation={navigation} title={'Adjectives'}/>
+            <SectionHeader navigation={navigation} title={'Adverbs'}/>
             <ScrollView contentContainerStyle={styles.scroll}>
                 {sections.map((list, index)=>
                    <TouchableOpacity key={index} 
                       onPress={()=> navigation.navigate('vocabularyListView', list)}
                       style={styles.card} >
-                        <MaterialIcons  style={styles.cardContainerIcon}  name={'invert-colors-on'} size={wp('15%')} color={'#293042'} />    
+                        <MaterialIcons  style={styles.cardContainerIcon}  name={'book'} size={wp('15%')} color={'#293042'} />    
                       <Text style={styles.cardText}>{list.title}</Text>
                    </TouchableOpacity>
                 )}

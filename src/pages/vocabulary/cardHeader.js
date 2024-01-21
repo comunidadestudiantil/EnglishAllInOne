@@ -12,7 +12,7 @@ export function CardHeader({ visible, index, showIcon, setShowIcon }) {
   }
 
   return (
-    <View style={[styles.cardHeader, index === 0 && { top: wp('-15%') }]}>
+    <View style={[styles.cardHeader]}>
 
       {showIcon.includes(index) ? (
         <>
@@ -43,15 +43,16 @@ export function CardHeader({ visible, index, showIcon, setShowIcon }) {
         </TouchableOpacity>
       )}
 
-      <Text style={[styles.cardIndexText]}>{index / 10}</Text>
+      <Text style={[styles.cardIndexText]}>{index}</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   cardHeader: {
-    position: 'absolute',
-    top: wp('-13%'),
+    zIndex:1,
+    position:'relative',
+    top: wp('0%'),
     width: wp('100%'),
     height: wp('13%'),
     backgroundColor: '#b9cfe8',

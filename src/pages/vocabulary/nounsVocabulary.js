@@ -9,15 +9,37 @@ export function NounsVocabulary(props){
     const {navigation} = props
     
     const sections =[
-        {title:'Nouns', start:0, end:99},
-        {title:'Nouns', start:100, end:199},
-        {title:'Nouns', start:200, end:299},
-        {title:'Nouns', start:300, end:399},
-        {title:'Nouns', start:400, end:499},
-        {title:'Nouns', start:500, end:599},
-        {title:'Nouns', start:600, end:699},
-        {title:'Nouns', start:700, end:899},
-
+        {title:'Nouns'},
+        {title:'Nouns (2)'},
+        {title:'Nouns (3)'},
+        {title:'Nouns (4)'},
+        {title:'Nouns (5)'},
+        {title:'Nouns (6)'},
+        {title:'Nouns (7)'},
+        {title:'Nouns (8)'},
+        {title:'Nouns (9)'},
+        {title:'Nouns (10)'},
+        {title:'Nouns (11)'},
+        {title:'Nouns (12)'},
+        {title:'Nouns (13)'},
+        {title:'Nouns (14)'},
+        {title:'Nouns (15)'},
+        {title:'Nouns (16)'},
+        {title:'Nouns (17)'},
+        {title:'Nouns (18)'},
+        {title:'Nouns (19)'},
+        {title:'Nouns (20)'},
+        {title:'Nouns (21)'},
+        {title:'Nouns (22)'},
+        {title:'Nouns (23)'},
+        {title:'Nouns (24)'},
+        {title:'Nouns (25)'},
+        {title:'Nouns (26)'},
+        {title:'Nouns (27)'},
+        {title:'Nouns (28)'},
+        {title:'Nouns (29)'},
+        {title:'Nouns (30)'},
+        {title:'Nouns (31)'},
     ]
 
     return(
@@ -30,7 +52,7 @@ export function NounsVocabulary(props){
                   style={styles.cardContainer}>
                  <MaterialIcons  style={styles.cardContainerIcon}  name={'book'} size={wp('15%')} color={'#d3deea'} />  
                  <Text style={styles.cardContainerText}>{list.title}</Text>
-                 <Text style={styles.cardContainerText}>{`${list.start*2}-${list.end*2}`}</Text>
+               
                </TouchableOpacity>)}
             </ScrollView>
         </View>

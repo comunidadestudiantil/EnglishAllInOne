@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HomeStack, TabBar, ListeningStack, NoteStack, VocabularyStack } from './index';
-import { FontAwesome, MaterialCommunityIcons, Foundation } from '../utils/icons';
+import { HomeStack, TabBar, NoteStack, VocabularyStack, DictionaryStack } from './index';
+import { FontAwesome, MaterialCommunityIcons, Foundation, Ionicons} from '../utils/icons';
 import { wp, hp } from '../utils/responsive';
 
 
@@ -30,7 +30,16 @@ export function BottomTabNavigation() {
         }}
 
       />
-
+      <Tab.Screen
+        name="dictionaryStack"
+        component={DictionaryStack}
+          options={{
+            tabBarHideOnKeyboard: true,
+            tabBarLabel:'Dictionary',
+            //tabBarIcon:<FontAwesome name="book" size={wp('7%')} color={'red'} />
+            tabBarIcon: (color) => <Ionicons name="book" size={wp('7%')} color={'#fff'} />
+          }}
+       />
       <Tab.Screen
         name="vocabularyStack"
         component={VocabularyStack}
@@ -44,18 +53,6 @@ export function BottomTabNavigation() {
       />
 
       <Tab.Screen
-        name="listeningStack"
-        component={ListeningStack}
-        options={{
-          tabBarHideOnKeyboard: true,
-          tabBarLabel: 'Listening',
-          //tabBarIcon:<FontAwesome name="book" size={wp('7%')} color={'red'} />
-          tabBarIcon: (color) => <MaterialCommunityIcons name="headphones" size={wp('7%')} color={'#fff'} />
-        }}
-      
-      />
-
-      <Tab.Screen
         name="noteStack"
         component={NoteStack}
           options={{
@@ -64,9 +61,7 @@ export function BottomTabNavigation() {
             //tabBarIcon:<FontAwesome name="book" size={wp('7%')} color={'red'} />
             tabBarIcon: (color) => <Foundation name="clipboard-notes" size={wp('7%')} color={'#fff'} />
           }}
-
-      />
-
+       />
 
     </Tab.Navigator>
   );

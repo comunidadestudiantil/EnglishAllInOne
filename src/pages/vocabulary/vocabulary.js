@@ -37,7 +37,7 @@ export function Vocabulary(props) {
         </TouchableOpacity>
         
         <TouchableOpacity 
-           onPress={()=> navigation.navigate('vocabularyListView', {title:'Adverbs', start:0, end:250})}
+           onPress={()=> navigation.navigate('adverbsView', {title:'Adverbs', start:0, end:250})}
            style={styles.card} >
           <MaterialIcons  style={styles.cardContainerIcon}  name={'book'} size={wp('15%')} color={'#293042'} />  
           <Text style={styles.cardText}>250 Adverbs</Text>
